@@ -1,0 +1,10 @@
+<div class="ui top attached tabular menu">
+  {{#each tabs as |tab|}}
+    <a class="item {{if tab.isActive 'active'}}" onClick={{action "toggle" tab}} data-tab={{tab.elementId}}>{{tab.title}}</a>
+  {{/each}}
+</div>
+{{yield
+  (hash
+    tab=(component tabComponentName menu=this)
+  )
+}}
