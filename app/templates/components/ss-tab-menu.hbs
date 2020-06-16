@@ -1,7 +1,7 @@
 {{#if (gt tabs.length 1)}}
   <div class="ui top attached tabular menu">
     {{#each tabs as |tab|}}
-      <a class="item {{if tab.isActive 'active'}} {{tab.class}}" onClick={{action "toggle" tab}} data-tab={{tab.elementId}}>{{tab.title}}</a>
+      <a class="item {{if tab.isActive 'active'}} {{tab.class}}" onClick={{action "toggle" tab}} data-tab={{tab.elementId}} data-test-tab={{tab.title}}>{{tab.title}}</a>
     {{/each}}
   </div>
 {{/if}}
